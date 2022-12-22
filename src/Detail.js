@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Box, Button, Image, Center, Heading, Text, Stack, SimpleGrid, Flex } from "@chakra-ui/react";
+import { Box, Button, Image, Heading, Text, SimpleGrid, Flex } from "@chakra-ui/react";
 
 function Detail() {
   const { id } = useParams();
@@ -25,9 +25,9 @@ function Detail() {
       console.error(error);
       setLoading(false);
     }
-  }, []);
+  }, [id]);
   console.log(cards);
-  if (cards.length < 1) return <h1>Loading...</h1>;
+  if (loading) return <h1>Loading...</h1>;
   return (
     <>
       {cards && (

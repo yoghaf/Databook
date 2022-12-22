@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Detail from "./Detail";
-import { Box, Center, Heading, Text, Flex } from "@chakra-ui/react";
+import { Box, Heading, Center } from "@chakra-ui/react";
 
 const NotFound = () => {
   return (
